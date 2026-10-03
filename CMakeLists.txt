@@ -16,6 +16,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 add_executable(factorial_test tests/factorial_test.cpp src/factorial.cpp)
-add_executable(main main.cpp src/factorial.cpp)
+add_executable(main main.cpp src/factorial.cpp
+  calculator.h calculator.cpp
+  stack.h
+  queue.h )
 
 target_link_libraries(factorial_test PRIVATE Catch2::Catch2WithMain)
